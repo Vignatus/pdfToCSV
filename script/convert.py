@@ -73,8 +73,4 @@ def convert_to_csv(pdf_path, output_path):
     final_frame_data = (final_frame.iloc[1:]).reset_index(drop=True)
     final_frame_data.columns = header
 
-    final_frame_data.to_csv((output_path + "\Output.csv"), index=False)
-
-
-convert_to_csv("BalSheet.pdf",
-               "C:\\Users\\surya\\Documents\\Rakesh\\Dehaat\\pdfToCsv\\script")
+    final_frame_data.to_csv((output_path + "/Output.csv"), index=False)
