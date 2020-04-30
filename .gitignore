@@ -1,0 +1,7 @@
+
+script/.vscode/
+server/.vscode/
+server/app/__pycache__/
+server/pdfToCsvServer/__pycache__/
+
+.vscode/
