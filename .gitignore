@@ -7,3 +7,5 @@ server/pdfToCsvServer/__pycache__/
 .vscode/
 
 *.csv
+
+server/app/media/
