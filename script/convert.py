@@ -39,7 +39,7 @@ def clean_df(frame):
 
 def convert_to_csv(pdf_path, output_path):
     # Read PDF and convert to data frame
-    raw_df = tabula.read_pdf("BalSheet.pdf", pages='all')
+    raw_df = tabula.read_pdf(pdf_path, pages='all')
     raw_df = pd.DataFrame(raw_df)
 
     # Extract only the first cell

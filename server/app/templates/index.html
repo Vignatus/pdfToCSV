@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <title>PDF to CSV</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <div class="content-body">
+    <div class="dialog">
+      <h1>Data Parsing</h1>
+      <form method="post" enctype="multipart/form-data" action="/download">
+        {%csrf_token%}
+        <div class="input-row">
+          <label class="input-label" for="variable">Query variable</label>
+          <input class="input" type="text" id="variable" name="variable" placeholder="NPA">
+        </div>
+        <div class="input-row">
+          <label class="input-label" for="year">Query year</label>
+          <input class="input" type="text" id="year" name="year" placeholder="2015">
+        </div>
+        <div class="input-row">
+          <span class="input-label">Please upload Balance Sheet</span>
+          <input class="input" type="file" name="document">
+        </div>
+        <div class="input-row">
+          <span class="input-label"></span>
+          <input class="input" type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
